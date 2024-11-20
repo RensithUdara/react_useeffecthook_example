@@ -8,9 +8,21 @@ function App() {
 
   const [error, setError] = useState("");
 
+  const handleResize = () => {
+    console.log('Resizing')
+  };
+
   useEffect(() => {
-    console.log('Effect Running' + count)
-  }, [count]);
+    window.addEventListener("resize" , handleResize)
+
+    return () => {
+
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   console.log('Effect Running' + count)
+  // }, [count , error]);
 
   // useEffect(() => {
   //   console.log('Effect Running')
@@ -28,7 +40,7 @@ function App() {
       }}> + Increment</button>
 
       <button onClick={() => {
-        if (count > 3 ) {
+        if (count > 3) {
           setError("There is an Error");
         }
       }}> Error Button</button>
