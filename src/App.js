@@ -6,6 +6,8 @@ function App() {
 
   const [count, setCount] = useState(0);
 
+  const [error, setError] = useState("");
+
   useEffect(() => {
     console.log('Effect Running' + count)
   }, [count]);
@@ -24,6 +26,13 @@ function App() {
       <button onClick={() => {
         setCount(count + 1);
       }}> + Increment</button>
+
+      <button onClick={() => {
+        if (count > 3 ) {
+          setError("There is an Error");
+        }
+      }}> Error Button</button>
+
     </div>
   );
 }
