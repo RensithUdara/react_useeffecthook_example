@@ -1,38 +1,106 @@
+/* App.css */
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #f9f9f9;
+  color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+/* Dark Mode */
+.App.dark {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+/* Header */
+.App-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Toggle Button */
+.toggle-btn {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #007bff;
+  background-color: white;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Content Section */
+.content {
+  margin-top: 100px;
+}
+
+.count-display {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Error Button */
+.error-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.error-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* Error Message */
+.error {
+  margin: 20px;
+  color: red;
+  font-size: 1.2rem;
+}
+
+/* Fetched Data */
+.data {
+  margin: 20px;
+  font-size: 1.1rem;
+  color: #007bff;
 }
