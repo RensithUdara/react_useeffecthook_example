@@ -1,15 +1,14 @@
-/* App.css */
-
 /* General Styling */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .App {
   text-align: center;
-  background-color: #f9f9f9;
-  color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,9 +27,10 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 10px;
   background-color: #007bff;
   color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .App-header h1 {
@@ -38,10 +38,8 @@ body {
   font-size: 1.5rem;
 }
 
-/* Toggle Button */
 .toggle-btn {
   padding: 8px 15px;
-  font-size: 0.9rem;
   margin-top: 10px;
   color: #007bff;
   background-color: white;
@@ -56,14 +54,25 @@ body {
   color: white;
 }
 
-/* Content Section */
+/* Main Content */
 .content {
   margin-top: 100px;
+  text-align: center;
 }
 
 .count-display {
   font-size: 3rem;
   margin: 20px;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.count-display.hovered {
+  transform: scale(1.1);
+  background-color: #e9f4ff;
 }
 
 .action-btn {
@@ -72,13 +81,15 @@ body {
   font-size: 1rem;
   border: none;
   border-radius: 5px;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .action-btn:hover {
   background-color: #0056b3;
-  color: white;
+  transform: scale(1.1);
 }
 
 /* Error Button */
@@ -98,9 +109,18 @@ body {
   font-size: 1.2rem;
 }
 
-/* Fetched Data */
+/* Dynamic Data */
 .data {
   margin: 20px;
   font-size: 1.1rem;
   color: #007bff;
+  font-weight: bold;
+}
+
+/* Timer */
+.timer {
+  margin: 20px;
+  font-size: 1.5rem;
+  color: #28a745;
+  font-weight: bold;
 }
