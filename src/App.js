@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log('Effect Running')
+    console.log('Effect Running' + count)
   }, [count]);
 
   // useEffect(() => {
