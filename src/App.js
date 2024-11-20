@@ -8,7 +8,11 @@ function App() {
 
   useEffect(() => {
     console.log('Effect Running')
-  }, []);
+  }, [count]);
+
+  // useEffect(() => {
+  //   console.log('Effect Running')
+  // }, []);
 
   // useEffect(() => {
   //   console.log('Effect Running')
